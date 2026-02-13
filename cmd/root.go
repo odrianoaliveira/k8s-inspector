@@ -1,5 +1,5 @@
 /*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
+Copyright © 2026 Adriano
 */
 package cmd
 
@@ -15,10 +15,6 @@ var rootCmd = &cobra.Command{
 	Short: "K8s inspector is a CLI tool gather Kubernetes information",
 	Long: `K8s inspector is a CLI tool to inspect Kubernetes clusters and resources.
 This tool is designed to help developers and devops engineers to quickly gather information about their Kubernetes clusters.`,
-
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -39,5 +35,5 @@ func init() {
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
