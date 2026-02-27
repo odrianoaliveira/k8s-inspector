@@ -4,7 +4,7 @@ A lightweight Kubernetes cluster inspection CLI tool built with Go.
 
 ## Overview
 
-k8s-inspector is a command-line utility designed to help developers and operators inspect and monitor Kubernetes clusters. It provides quick access to pod information, status, resource usage, and logs without the overhead of complex dashboards.
+k8s-inspector is a CLI utility designed to help developers and devops engineers to inspect and monitor Kubernetes clusters. It provides quick access to pod information, status, resource usage, and logs without the overhead of complex dashboards.
 
 ## Project Plan
 
@@ -23,7 +23,7 @@ k8s-inspector is a command-line utility designed to help developers and operator
   - Provides access to Kubernetes API resources
   - Handles authentication and cluster communication
 
-- **cobra**: CLI framework for building command-line applications
+- **cobra**: CLI framework for building CLI applications
   - Used by kubectl, helm, and other popular Kubernetes tools
   - Provides subcommands, flags, and argument parsing
 
@@ -67,24 +67,25 @@ Run `./k8s-inspector --help` to see all available commands and options.
 
 ## Development
 
-### Build the Project
 
 ```bash
+# Build the Project
 make build
-```
 
-## Project Structure
+# Run all tests
+make test
 
-```
-k8s-inspector/
-├── main.go           # Entry point
-├── cmd/
-│   ├── root.go       # Root command definition
-│   └── pods.go       # Pods command implementation
-├── go.mod            # Go module definition
-├── go.sum            # Go module checksums
-├── Makefile          # Build automation
-└── README.md         # This file
+# Run with verbose output
+make test-verbose
+
+# Check test coverage
+make test-coverage
+
+# Run specific package tests
+go test ./cmd -v
+
+# Run specific test
+go test ./cmd -run TestPodsCommandExecution
 ```
 
 ## Roadmap
